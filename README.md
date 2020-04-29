@@ -3,6 +3,7 @@ Useful script(s), written during configuring and maintaining OpenVPN server
 
 ## openvpn.sh
 Inspired by https://github.com/Nyr/openvpn-install
+
 Made for standart Debian/Ubuntu OpenVPN server setup from repo
 
 Simple script for adding/revoking OpenVPN users
