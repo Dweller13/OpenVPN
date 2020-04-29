@@ -1,10 +1,9 @@
-# OpenVPN
-Useful script(s), written during configuring and maintaining OpenVPN server
+## OpenVPN
 
-## openvpn.sh
-Inspired by https://github.com/Nyr/openvpn-install
+### openvpn.sh
+Inspired by [Nyr's openvpn-installer](https://github.com/Nyr/openvpn-install)
 
-Made for standart Debian/Ubuntu OpenVPN server setup from repo
+Made for already installed OpenVPN server on Debian/Ubuntu from repo
 
 Simple script for adding/revoking OpenVPN users
 - Set your username to store archive in your home folder for further `scp` or `sftp`
