@@ -46,13 +46,13 @@ HOMEDIR=/home/$USERNAME
       fi
       echo
       echo "Select the existing client certificate you want to revoke:"
-      tail -n +2 /etc/openvpn/certs/keys/index.txt | grep "^V" | cut -d '=' -f 7 | cut -d '/' -f 1 | nl -s ') '
+      tail -n +2 /etc/openvpn/certs/keys/index.txt | grep "^V" | cut -d '=' -f 7 | cut -d '/' -f 1 | sort | nl -s ') '
       if [[ "$NUMBEROFCLIENTS" = '1' ]]; then
         read -p "Select one client [1]: " CLIENTNUMBER
       else
         read -p "Select one client [1-$NUMBEROFCLIENTS]: " CLIENTNUMBER
       fi
-      CLIENT=$(tail -n +2 /etc/openvpn/certs/keys/index.txt | grep "^V" | cut -d '=' -f 7 | cut -d '/' -f 1 | sed -n "$CLIENTNUMBER"p)
+      CLIENT=$(tail -n +2 /etc/openvpn/certs/keys/index.txt | grep "^V" | cut -d '=' -f 7 | cut -d '/' -f 1 | sort | sed -n "$CLIENTNUMBER"p)
       echo
       read -p "Do you really want to revoke access for client $CLIENT? [y/N]: " -e REVOKE
       if [[ "$REVOKE" = 'y' || "$REVOKE" = 'Y' ]]; then
